@@ -16,9 +16,35 @@
     "dark": "One Dark"
   },
   "auto_install_extensions": {
+    "php": true,
     "html": true,
+    "r": true,
+    "scss": true,
+    "toml": true,
+    "vue": true,
+    "sql": true,
+    "rainbow-csv": true,
+
+    "latex": true,
+    "liquid": true,
+
+    "just": true,
+    "make": true,
+
+    "ruby": true,
+    "perl": true,
+    "lua": true,
+    "scheme": true,
+    "python-requirements": true,
+
+    "java": true,
+    "scala": true,
+    "verilog": true,
+    "fsharp": true,
+    "d": true,
+
     "dockerfile": true,
-    "solarized": true,
-    "toml": true
+    "tokyo-night": true,
+    "solarized": true
   }
 }
