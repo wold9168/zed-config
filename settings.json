@@ -7,10 +7,20 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "show_edit_predictions": false,
+  "agent": {
+    "single_file_review": false,
+    "model_parameters": [],
+    "default_model": {
+      "provider": "deepseek",
+      "model": "deepseek-chat"
+    },
+    "version": "2"
+  },
   "vim_mode": false,
   "base_keymap": "VSCode",
-  "ui_font_size": 26,
-  "buffer_font_size": 30,
+  "ui_font_size": 20,
+  "buffer_font_size": 20,
   "theme": {
     "mode": "system",
     "light": "Solarized Light",
@@ -28,6 +38,7 @@
 
     "latex": true,
     "liquid": true,
+    "typst": true,
 
     "just": true,
     "make": true,
@@ -47,7 +58,14 @@
     "haskell": true,
 
     "dockerfile": true,
+    "git-firefly": true,
+
     "tokyo-night": true,
     "solarized": true
-  }
+  },
+
+  // "buffer_font_family": "Noto Sans Mono CJK SC",
+  "buffer_font_family": "Source Han Mono SC",
+  // "buffer_font_family": "IBM Plex Mono",
+  "buffer_font_fallbacks": ["BlexMono Nerd Font", "Noto Sans CJK SC"]
 }
