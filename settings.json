@@ -7,6 +7,34 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "ssh_connections": [
+    {
+      "host": "172.17.0.3",
+      "username": "root",
+      "projects": [
+        {
+          "paths": [
+            "/root"
+          ]
+        },
+        {
+          "paths": [
+            "/root/samples"
+          ]
+        },
+        {
+          "paths": [
+            "/root/samples/operator/ascendc/0_introduction/3_add_kernellaunch/AddKernelInvocationNeo"
+          ]
+        },
+        {
+          "paths": [
+            "/root/samples/operator/ascendc/0_introduction/3_add_kernellaunch/AddKernelInvocationTilingNeo"
+          ]
+        }
+      ]
+    }
+  ],
   "show_edit_predictions": false,
   "agent": {
     "single_file_review": false,
@@ -23,7 +51,7 @@
   "buffer_font_size": 20,
   "theme": {
     "mode": "system",
-    "light": "Solarized Light",
+    "light": "Solarized Dark",
     "dark": "One Dark"
   },
   "auto_install_extensions": {
@@ -42,6 +70,7 @@
 
     "just": true,
     "make": true,
+    "neocmake": true,
 
     "ruby": true,
     "perl": true,
