@@ -7,20 +7,19 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "telemetry": {
+    "metrics": false
+  },
   "ssh_connections": [
     {
       "host": "172.17.0.3",
       "username": "root",
       "projects": [
         {
-          "paths": [
-            "/root"
-          ]
+          "paths": ["/root"]
         },
         {
-          "paths": [
-            "/root/samples"
-          ]
+          "paths": ["/root/samples"]
         },
         {
           "paths": [
