@@ -10,30 +10,6 @@
   "telemetry": {
     "metrics": false
   },
-  "ssh_connections": [
-    {
-      "host": "172.17.0.3",
-      "username": "root",
-      "projects": [
-        {
-          "paths": ["/root"]
-        },
-        {
-          "paths": ["/root/samples"]
-        },
-        {
-          "paths": [
-            "/root/samples/operator/ascendc/0_introduction/3_add_kernellaunch/AddKernelInvocationNeo"
-          ]
-        },
-        {
-          "paths": [
-            "/root/samples/operator/ascendc/0_introduction/3_add_kernellaunch/AddKernelInvocationTilingNeo"
-          ]
-        }
-      ]
-    }
-  ],
   "show_edit_predictions": false,
   "agent": {
     "single_file_review": false,
