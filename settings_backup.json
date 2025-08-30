@@ -40,14 +40,14 @@
   },
   "show_edit_predictions": true,
   "agent": {
-    "default_profile": "write",
     "play_sound_when_agent_done": false,
     "single_file_review": false,
     "model_parameters": [],
     "default_model": {
-      "provider": "deepseek",
-      "model": "deepseek-chat"
-    }
+      "provider": "QWen",
+      "model": "qwen3-coder-flash"
+    },
+    "version": "2"
   },
   "vim_mode": false,
   "base_keymap": "VSCode",
@@ -97,7 +97,8 @@
     "tokyo-night": true,
     "solarized": true,
 
-    "postgres-context-server": true
+    "postgres-context-server": true,
+    "mcp-server-github": true
   },
 
   // "buffer_font_family": "Noto Sans Mono CJK SC",
