@@ -40,7 +40,7 @@
   },
   "show_edit_predictions": true,
   "agent": {
-    "default_profile": "ask",
+    "default_profile": "write",
     "play_sound_when_agent_done": false,
     "single_file_review": false,
     "model_parameters": [],
