@@ -7,6 +7,9 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "features": {
+    "edit_prediction_provider": "none"
+  },
   "language_models": {
     "openai_compatible": {
       // "ZhipuAI(bigmodel)": {
@@ -46,6 +49,32 @@
           {
             "name": "qwen3-coder-flash",
             "display_name": null,
+            "max_tokens": 1000000,
+            "max_output_tokens": 65536,
+            "max_completion_tokens": 1000000,
+            "capabilities": {
+              "tools": true,
+              "images": false,
+              "parallel_tool_calls": false,
+              "prompt_cache_key": false
+            }
+          },
+          {
+            "name": "qwen3-coder-plus",
+            "display_name": null,
+            "max_tokens": 1000000,
+            "max_output_tokens": 65536,
+            "max_completion_tokens": 1000000,
+            "capabilities": {
+              "tools": true,
+              "images": false,
+              "parallel_tool_calls": false,
+              "prompt_cache_key": false
+            }
+          },
+          {
+            "name": "qwen3-coder-480b-a35b-instruct",
+            "display_name": null,
             "max_tokens": 262144,
             "max_output_tokens": 65536,
             "max_completion_tokens": 262144,
@@ -57,7 +86,7 @@
             }
           },
           {
-            "name": "qwen3-coder-plus",
+            "name": "qwen3-coder-30b-a3b-instruct ",
             "display_name": null,
             "max_tokens": 262144,
             "max_output_tokens": 65536,
@@ -88,8 +117,8 @@
     "single_file_review": false,
     "model_parameters": [],
     "default_model": {
-      "provider": "ZhipuAI(bigmodel)",
-      "model": "glm-4.5"
+      "provider": "QWen",
+      "model": "qwen3-coder-plus"
     }
   },
   "vim_mode": false,
@@ -98,7 +127,7 @@
   "buffer_font_size": 20,
   "theme": {
     "mode": "system",
-    "light": "One Light",
+    "light": "Catppuccin Latte",
     "dark": "One Dark"
   },
   "auto_install_extensions": {
@@ -139,10 +168,12 @@
 
     "tokyo-night": true,
     "solarized": true,
+    "catppuccin": true,
 
     "postgres-context-server": true
   },
 
+  "ui_font_family": "Source Han Mono SC",
   // "buffer_font_family": "Noto Sans Mono CJK SC",
   "buffer_font_family": "Source Han Mono SC",
   // "buffer_font_family": "IBM Plex Mono",
