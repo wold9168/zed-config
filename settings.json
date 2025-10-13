@@ -7,42 +7,49 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "agent_servers": {
+    "Qwen": {
+      "command": "qwen",
+      "args": ["--experimental-acp"],
+      "env": {}
+    }
+  },
   "features": {
     "edit_prediction_provider": "none"
   },
   "language_models": {
     "openai_compatible": {
-      // "ZhipuAI(bigmodel)": {
-      //   "api_url": "https://open.bigmodel.cn/api/paas/v4",
-      //   "available_models": [
-      //     {
-      //       "name": "glm-4.5-flash",
-      //       "display_name": null,
-      //       "max_tokens": 128000,
-      //       "max_output_tokens": 96000,
-      //       "max_completion_tokens": 128000,
-      //       "capabilities": {
-      //         "tools": true,
-      //         "images": false,
-      //         "parallel_tool_calls": false,
-      //         "prompt_cache_key": false
-      //       }
-      //     },
-      //     {
-      //       "name": "glm-4.5",
-      //       "display_name": null,
-      //       "max_tokens": 128000,
-      //       "max_output_tokens": 96000,
-      //       "max_completion_tokens": 128000,
-      //       "capabilities": {
-      //         "tools": true,
-      //         "images": false,
-      //         "parallel_tool_calls": false,
-      //         "prompt_cache_key": false
-      //       }
-      //     }
-      //   ]
-      // },
+      "ZhipuAI(bigmodel)": {
+        "api_url": "https://open.bigmodel.cn/api/paas/v4",
+        "available_models": [
+          {
+            "name": "glm-4.5-flash",
+            "display_name": null,
+            "max_tokens": 128000,
+            "max_output_tokens": 96000,
+            "max_completion_tokens": 128000,
+            "capabilities": {
+              "tools": true,
+              "images": false,
+              "parallel_tool_calls": false,
+              "prompt_cache_key": false
+            }
+          },
+          {
+            "name": "glm-4.5",
+            "display_name": null,
+            "max_tokens": 128000,
+            "max_output_tokens": 96000,
+            "max_completion_tokens": 128000,
+            "capabilities": {
+              "tools": true,
+              "images": false,
+              "parallel_tool_calls": false,
+              "prompt_cache_key": false
+            }
+          }
+        ]
+      },
       "QWen": {
         "api_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
         "available_models": [
