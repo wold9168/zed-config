@@ -19,6 +19,71 @@
   },
   "language_models": {
     "openai_compatible": {
+      "Siliconflow": {
+        "api_url": "https://api.siliconflow.cn/v1",
+        "available_models": [
+          {
+            "name": "THUDM/GLM-4-9B-0414",
+            "max_tokens": 32000,
+            "max_output_tokens": 32000,
+            "max_completion_tokens": 32000,
+            "capabilities": {
+              "tools": true,
+              "images": false,
+              "parallel_tool_calls": true,
+              "prompt_cache_key": false
+            }
+          },
+          {
+            "name": "THUDM/GLM-Z1-9B-0414",
+            "max_tokens": 128000,
+            "max_output_tokens": 128000,
+            "max_completion_tokens": 32000,
+            "capabilities": {
+              "tools": true,
+              "images": false,
+              "parallel_tool_calls": true,
+              "prompt_cache_key": false
+            }
+          },
+          {
+            "name": "Qwen/Qwen3-Coder-480B-A35B-Instruct",
+            "max_tokens": 256000,
+            "max_output_tokens": 256000,
+            "max_completion_tokens": 128000,
+            "capabilities": {
+              "tools": true,
+              "images": false,
+              "parallel_tool_calls": true,
+              "prompt_cache_key": false
+            }
+          },
+          {
+            "name": "Qwen/Qwen3-Coder-30B-A3B-Instruct",
+            "max_tokens": 256000,
+            "max_output_tokens": 256000,
+            "max_completion_tokens": 128000,
+            "capabilities": {
+              "tools": true,
+              "images": false,
+              "parallel_tool_calls": true,
+              "prompt_cache_key": false
+            }
+          },
+          {
+            "name": "zai-org/GLM-4.6",
+            "max_tokens": 198000,
+            "max_output_tokens": 198000,
+            "max_completion_tokens": 128000,
+            "capabilities": {
+              "tools": true,
+              "images": false,
+              "parallel_tool_calls": true,
+              "prompt_cache_key": false
+            }
+          }
+        ]
+      },
       "ZhipuAI(bigmodel)": {
         "api_url": "https://open.bigmodel.cn/api/paas/v4",
         "available_models": [
@@ -31,7 +96,7 @@
             "capabilities": {
               "tools": true,
               "images": false,
-              "parallel_tool_calls": false,
+              "parallel_tool_calls": true,
               "prompt_cache_key": false
             }
           },
@@ -44,7 +109,7 @@
             "capabilities": {
               "tools": true,
               "images": false,
-              "parallel_tool_calls": false,
+              "parallel_tool_calls": true,
               "prompt_cache_key": false
             }
           }
@@ -58,11 +123,11 @@
             "display_name": null,
             "max_tokens": 1000000,
             "max_output_tokens": 65536,
-            "max_completion_tokens": 1000000,
+            "max_completion_tokens": 100000,
             "capabilities": {
               "tools": true,
               "images": false,
-              "parallel_tool_calls": false,
+              "parallel_tool_calls": true,
               "prompt_cache_key": false
             }
           },
@@ -71,11 +136,11 @@
             "display_name": null,
             "max_tokens": 1000000,
             "max_output_tokens": 65536,
-            "max_completion_tokens": 1000000,
+            "max_completion_tokens": 100000,
             "capabilities": {
               "tools": true,
               "images": false,
-              "parallel_tool_calls": false,
+              "parallel_tool_calls": true,
               "prompt_cache_key": false
             }
           },
@@ -88,7 +153,7 @@
             "capabilities": {
               "tools": true,
               "images": false,
-              "parallel_tool_calls": false,
+              "parallel_tool_calls": true,
               "prompt_cache_key": false
             }
           },
@@ -101,7 +166,7 @@
             "capabilities": {
               "tools": true,
               "images": false,
-              "parallel_tool_calls": false,
+              "parallel_tool_calls": true,
               "prompt_cache_key": false
             }
           }
@@ -119,13 +184,13 @@
   },
   "show_edit_predictions": true,
   "agent": {
-    "default_profile": "write",
+    "default_profile": "ask",
     "play_sound_when_agent_done": false,
     "single_file_review": false,
     "model_parameters": [],
     "default_model": {
-      "provider": "QWen",
-      "model": "qwen3-coder-plus"
+      "provider": "Siliconflow",
+      "model": "deepseek-ai/DeepSeek-OCR"
     }
   },
   "vim_mode": false,
@@ -176,6 +241,7 @@
     "tokyo-night": true,
     "solarized": true,
     "catppuccin": true,
+    "mermaid": true,
 
     "postgres-context-server": true
   },
