@@ -190,7 +190,8 @@
           "command": "typstyle",
           "arguments": ["{buffer_path}"]
         }
-      }
+      },
+      "soft_wrap":"editor_width"
     }
   },
   "telemetry": {
