@@ -213,7 +213,7 @@
   "buffer_font_size": 20,
   "theme": {
     "mode": "system",
-    "light": "Catppuccin Latte",
+    "light": "Solarized Dark",
     "dark": "One Dark"
   },
   "auto_install_extensions": {
