@@ -7,7 +7,13 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "format_on_save": "off",
   "agent_servers": {
+    "iflow": {
+      "command": "iflow",
+      "args": ["--experimental-acp"],
+      "env": {}
+    },
     "Qwen": {
       "command": "qwen",
       "args": ["--experimental-acp"],
@@ -177,6 +183,14 @@
   "languages": {
     "Markdown": {
       "show_edit_predictions": false
+    },
+    "Typst": {
+      "formatter": {
+        "external": {
+          "command": "typstyle",
+          "arguments": ["{buffer_path}"]
+        }
+      }
     }
   },
   "telemetry": {
@@ -190,7 +204,7 @@
     "model_parameters": [],
     "default_model": {
       "provider": "Siliconflow",
-      "model": "deepseek-ai/DeepSeek-OCR"
+      "model": "Qwen/Qwen3-Coder-480B-A35B-Instruct"
     }
   },
   "vim_mode": false,
@@ -212,6 +226,7 @@
     "vue": true,
     "sql": true,
     "rainbow-csv": true,
+    "log": true,
 
     "latex": true,
     "liquid": true,
