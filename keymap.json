@@ -23,5 +23,11 @@
     "bindings": {
       "ctrl-y": null
     }
+  },
+  {
+    "context": "(AgentPanel || Editor)",
+    "bindings": {
+      "ctrl-y": "agent::AllowOnce"
+    }
   }
 ]

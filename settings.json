@@ -10,11 +10,13 @@
   "format_on_save": "off",
   "agent_servers": {
     "iflow": {
+      "type": "custom",
       "command": "iflow",
       "args": ["--experimental-acp"],
       "env": {}
     },
     "Qwen": {
+      "type": "custom",
       "command": "qwen",
       "args": ["--experimental-acp"],
       "env": {}
@@ -107,11 +109,24 @@
             }
           },
           {
-            "name": "glm-4.5",
+            "name": "GLM-4.5-Air",
             "display_name": null,
             "max_tokens": 128000,
             "max_output_tokens": 96000,
             "max_completion_tokens": 128000,
+            "capabilities": {
+              "tools": true,
+              "images": false,
+              "parallel_tool_calls": true,
+              "prompt_cache_key": false
+            }
+          },
+          {
+            "name": "glm-4.6",
+            "display_name": null,
+            "max_tokens": 128000,
+            "max_output_tokens": 96000,
+            "max_completion_tokens": 200000,
             "capabilities": {
               "tools": true,
               "images": false,
@@ -164,7 +179,7 @@
             }
           },
           {
-            "name": "qwen3-coder-30b-a3b-instruct ",
+            "name": "qwen3-coder-30b-a3b-instruct",
             "display_name": null,
             "max_tokens": 262144,
             "max_output_tokens": 65536,
@@ -191,7 +206,7 @@
           "arguments": ["{buffer_path}"]
         }
       },
-      "soft_wrap":"editor_width"
+      "soft_wrap": "editor_width"
     }
   },
   "telemetry": {
@@ -199,14 +214,12 @@
   },
   "show_edit_predictions": true,
   "agent": {
-    "default_profile": "write",
-    "play_sound_when_agent_done": false,
-    "single_file_review": false,
-    "model_parameters": [],
+    "default_profile": "ask",
     "default_model": {
-      "provider": "Siliconflow",
-      "model": "Qwen/Qwen3-Coder-480B-A35B-Instruct"
-    }
+      "provider": "ZhipuAI(bigmodel)",
+      "model": "glm-4.6"
+    },
+    "model_parameters": []
   },
   "vim_mode": false,
   "base_keymap": "VSCode",
@@ -236,11 +249,13 @@
     "just": true,
     "make": true,
     "neocmake": true,
+    "nix": true,
 
     "ruby": true,
     "perl": true,
     "lua": true,
     "scheme": true,
+    "terraform": true,
     "python-requirements": true,
 
     "java": true,
@@ -259,6 +274,7 @@
     "catppuccin": true,
     "mermaid": true,
 
+    "opencode": true,
     "postgres-context-server": true
   },
 
