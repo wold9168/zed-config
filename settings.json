@@ -7,23 +7,28 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "icon_theme": "Catppuccin Latte",
+  "session": {
+    "trust_all_worktrees": true,
+  },
+  "disable_ai": false,
   "format_on_save": "off",
   "agent_servers": {
     "iflow": {
       "type": "custom",
       "command": "iflow",
       "args": ["--experimental-acp"],
-      "env": {}
+      "env": {},
     },
     "Qwen": {
       "type": "custom",
       "command": "qwen",
       "args": ["--experimental-acp"],
-      "env": {}
-    }
+      "env": {},
+    },
   },
   "features": {
-    "edit_prediction_provider": "none"
+    "edit_prediction_provider": "none",
   },
   "language_models": {
     "openai_compatible": {
@@ -39,8 +44,8 @@
               "tools": true,
               "images": false,
               "parallel_tool_calls": true,
-              "prompt_cache_key": false
-            }
+              "prompt_cache_key": false,
+            },
           },
           {
             "name": "THUDM/GLM-Z1-9B-0414",
@@ -51,8 +56,8 @@
               "tools": true,
               "images": false,
               "parallel_tool_calls": true,
-              "prompt_cache_key": false
-            }
+              "prompt_cache_key": false,
+            },
           },
           {
             "name": "Qwen/Qwen3-Coder-480B-A35B-Instruct",
@@ -63,8 +68,8 @@
               "tools": true,
               "images": false,
               "parallel_tool_calls": true,
-              "prompt_cache_key": false
-            }
+              "prompt_cache_key": false,
+            },
           },
           {
             "name": "Qwen/Qwen3-Coder-30B-A3B-Instruct",
@@ -75,8 +80,8 @@
               "tools": true,
               "images": false,
               "parallel_tool_calls": true,
-              "prompt_cache_key": false
-            }
+              "prompt_cache_key": false,
+            },
           },
           {
             "name": "zai-org/GLM-4.6",
@@ -87,10 +92,10 @@
               "tools": true,
               "images": false,
               "parallel_tool_calls": true,
-              "prompt_cache_key": false
-            }
-          }
-        ]
+              "prompt_cache_key": false,
+            },
+          },
+        ],
       },
       "ZhipuAI(bigmodel)": {
         "api_url": "https://open.bigmodel.cn/api/paas/v4",
@@ -105,8 +110,8 @@
               "tools": true,
               "images": false,
               "parallel_tool_calls": true,
-              "prompt_cache_key": false
-            }
+              "prompt_cache_key": false,
+            },
           },
           {
             "name": "GLM-4.5-Air",
@@ -118,8 +123,8 @@
               "tools": true,
               "images": false,
               "parallel_tool_calls": true,
-              "prompt_cache_key": false
-            }
+              "prompt_cache_key": false,
+            },
           },
           {
             "name": "glm-4.6",
@@ -131,8 +136,8 @@
               "tools": true,
               "images": false,
               "parallel_tool_calls": true,
-              "prompt_cache_key": false
-            }
+              "prompt_cache_key": false,
+            },
           },
           {
             "name": "glm-4.7",
@@ -144,10 +149,10 @@
               "tools": true,
               "images": false,
               "parallel_tool_calls": true,
-              "prompt_cache_key": false
-            }
-          }
-        ]
+              "prompt_cache_key": false,
+            },
+          },
+        ],
       },
       "QWen": {
         "api_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
@@ -162,8 +167,8 @@
               "tools": true,
               "images": false,
               "parallel_tool_calls": true,
-              "prompt_cache_key": false
-            }
+              "prompt_cache_key": false,
+            },
           },
           {
             "name": "qwen3-coder-plus",
@@ -175,8 +180,8 @@
               "tools": true,
               "images": false,
               "parallel_tool_calls": true,
-              "prompt_cache_key": false
-            }
+              "prompt_cache_key": false,
+            },
           },
           {
             "name": "qwen3-coder-480b-a35b-instruct",
@@ -188,8 +193,8 @@
               "tools": true,
               "images": false,
               "parallel_tool_calls": true,
-              "prompt_cache_key": false
-            }
+              "prompt_cache_key": false,
+            },
           },
           {
             "name": "qwen3-coder-30b-a3b-instruct",
@@ -201,38 +206,42 @@
               "tools": true,
               "images": false,
               "parallel_tool_calls": true,
-              "prompt_cache_key": false
-            }
-          }
-        ]
-      }
-    }
+              "prompt_cache_key": false,
+            },
+          },
+        ],
+      },
+    },
   },
   "languages": {
     "Markdown": {
-      "show_edit_predictions": false
+      "show_edit_predictions": false,
     },
     "Typst": {
       "formatter": {
         "external": {
           "command": "typstyle",
-          "arguments": ["{buffer_path}"]
-        }
+          "arguments": ["{buffer_path}"],
+        },
       },
-      "soft_wrap": "editor_width"
-    }
+      "soft_wrap": "editor_width",
+    },
   },
   "telemetry": {
-    "metrics": false
+    "metrics": false,
   },
   "show_edit_predictions": true,
   "agent": {
-    "default_profile": "ask",
-    "default_model": {
-      "provider": "ZhipuAI(bigmodel)",
-      "model": "glm-4.6"
+    "inline_assistant_model": {
+      "provider": "deepseek",
+      "model": "deepseek-chat",
     },
-    "model_parameters": []
+    "default_profile": "write",
+    "default_model": {
+      "provider": "deepseek",
+      "model": "deepseek-chat",
+    },
+    "model_parameters": [],
   },
   "vim_mode": false,
   "base_keymap": "VSCode",
@@ -241,7 +250,7 @@
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "One Dark"
+    "dark": "One Dark",
   },
   "auto_install_extensions": {
     "php": true,
@@ -286,15 +295,16 @@
     "tokyo-night": true,
     "solarized": true,
     "catppuccin": true,
+    "catppuccin-icons": true,
     "mermaid": true,
 
     "opencode": true,
-    "postgres-context-server": true
+    "postgres-context-server": true,
   },
 
   "ui_font_family": "Source Han Mono SC",
   // "buffer_font_family": "Noto Sans Mono CJK SC",
   "buffer_font_family": "Source Han Mono SC",
   // "buffer_font_family": "IBM Plex Mono",
-  "buffer_font_fallbacks": ["BlexMono Nerd Font", "Noto Sans CJK SC"]
+  "buffer_font_fallbacks": ["BlexMono Nerd Font", "Noto Sans CJK SC"],
 }
