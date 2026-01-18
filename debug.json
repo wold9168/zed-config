@@ -61,7 +61,18 @@
     "label": "Debug C binary (clang)",
     "build": {
       "command": "clang",
-      "args": ["-g","$ZED_FILE","-o","$ZED_DIRNAME/$ZED_STEM"],
+      "args": ["-g", "$ZED_FILE", "-o", "$ZED_DIRNAME/$ZED_STEM"],
+      "cwd": "$ZED_WORKTREE_ROOT",
+    },
+    "program": "$ZED_DIRNAME/$ZED_STEM",
+    "request": "launch",
+    "adapter": "CodeLLDB",
+  },
+  {
+    "label": "Debug C++ binary (clang++)",
+    "build": {
+      "command": "clang++",
+      "args": ["-g", "$ZED_FILE", "-o", "$ZED_DIRNAME/$ZED_STEM"],
       "cwd": "$ZED_WORKTREE_ROOT",
     },
     "program": "$ZED_DIRNAME/$ZED_STEM",
