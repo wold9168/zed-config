@@ -397,10 +397,10 @@
       "provider": "deepseek",
       "model": "deepseek-chat",
     },
-    "default_profile": "ask",
+    "default_profile": "write",
     "default_model": {
-      "provider": "Local OneAPI",
-      "model": "deepseek-chat",
+      "provider": "ZhipuAI(bigmodel)",
+      "model": "glm-4.7",
     },
     "model_parameters": [],
   },
