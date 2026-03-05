@@ -7,29 +7,50 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "icon_theme": "Catppuccin Latte",
+  "session": {
+    "trust_all_worktrees": true,
+  },
+  "disable_ai": false,
   "format_on_save": "off",
   "agent_servers": {
     "iflow": {
+      "type": "custom",
       "command": "iflow",
       "args": ["--experimental-acp"],
-      "env": {}
+      "env": {},
     },
     "Qwen": {
+      "type": "custom",
       "command": "qwen",
       "args": ["--experimental-acp"],
-      "env": {}
-    }
+      "env": {},
+    },
   },
   "features": {
-    "edit_prediction_provider": "none"
+    "edit_prediction_provider": "none",
   },
   "language_models": {
     "openai_compatible": {
-      "Siliconflow": {
-        "api_url": "https://api.siliconflow.cn/v1",
+      "Local OneAPI": {
+        "api_url": "http://192.168.24.4:3002/v1",
         "available_models": [
           {
+            "name": "deepseek-chat",
+            "display_name": null,
+            "max_tokens": 200000,
+            "max_output_tokens": 32000,
+            "max_completion_tokens": 200000,
+            "capabilities": {
+              "tools": true,
+              "images": false,
+              "parallel_tool_calls": false,
+              "prompt_cache_key": false
+            }
+          },
+          {
             "name": "THUDM/GLM-4-9B-0414",
+            "display_name": null,
             "max_tokens": 32000,
             "max_output_tokens": 32000,
             "max_completion_tokens": 32000,
@@ -42,6 +63,7 @@
           },
           {
             "name": "THUDM/GLM-Z1-9B-0414",
+            "display_name": null,
             "max_tokens": 128000,
             "max_output_tokens": 128000,
             "max_completion_tokens": 32000,
@@ -54,6 +76,7 @@
           },
           {
             "name": "Qwen/Qwen3-Coder-480B-A35B-Instruct",
+            "display_name": null,
             "max_tokens": 256000,
             "max_output_tokens": 256000,
             "max_completion_tokens": 128000,
@@ -66,6 +89,7 @@
           },
           {
             "name": "Qwen/Qwen3-Coder-30B-A3B-Instruct",
+            "display_name": null,
             "max_tokens": 256000,
             "max_output_tokens": 256000,
             "max_completion_tokens": 128000,
@@ -76,23 +100,6 @@
               "prompt_cache_key": false
             }
           },
-          {
-            "name": "zai-org/GLM-4.6",
-            "max_tokens": 198000,
-            "max_output_tokens": 198000,
-            "max_completion_tokens": 128000,
-            "capabilities": {
-              "tools": true,
-              "images": false,
-              "parallel_tool_calls": true,
-              "prompt_cache_key": false
-            }
-          }
-        ]
-      },
-      "ZhipuAI(bigmodel)": {
-        "api_url": "https://open.bigmodel.cn/api/paas/v4",
-        "available_models": [
           {
             "name": "glm-4.5-flash",
             "display_name": null,
@@ -107,22 +114,9 @@
             }
           },
           {
-            "name": "glm-4.5",
-            "display_name": null,
-            "max_tokens": 128000,
-            "max_output_tokens": 96000,
-            "max_completion_tokens": 128000,
-            "capabilities": {
-              "tools": true,
-              "images": false,
-              "parallel_tool_calls": true,
-              "prompt_cache_key": false
-            }
-          },
-          {
             "name": "glm-4.6",
             "display_name": null,
-            "max_tokens": 128000,
+            "max_tokens": 200000,
             "max_output_tokens": 96000,
             "max_completion_tokens": 200000,
             "capabilities": {
@@ -131,12 +125,20 @@
               "parallel_tool_calls": true,
               "prompt_cache_key": false
             }
-          }
-        ]
-      },
-      "QWen": {
-        "api_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
-        "available_models": [
+          },
+          {
+            "name": "glm-4.7",
+            "display_name": null,
+            "max_tokens": 200000,
+            "max_output_tokens": 96000,
+            "max_completion_tokens": 200000,
+            "capabilities": {
+              "tools": true,
+              "images": false,
+              "parallel_tool_calls": true,
+              "prompt_cache_key": false
+            }
+          },
           {
             "name": "qwen3-coder-flash",
             "display_name": null,
@@ -177,7 +179,7 @@
             }
           },
           {
-            "name": "qwen3-coder-30b-a3b-instruct ",
+            "name": "qwen3-coder-30b-a3b-instruct",
             "display_name": null,
             "max_tokens": 262144,
             "max_output_tokens": 65536,
@@ -190,42 +192,226 @@
             }
           }
         ]
-      }
-    }
+      },
+      "Siliconflow": {
+        "api_url": "https://api.siliconflow.cn/v1",
+        "available_models": [
+          {
+            "name": "THUDM/GLM-4-9B-0414",
+            "max_tokens": 32000,
+            "max_output_tokens": 32000,
+            "max_completion_tokens": 32000,
+            "capabilities": {
+              "tools": true,
+              "images": false,
+              "parallel_tool_calls": true,
+              "prompt_cache_key": false,
+            },
+          },
+          {
+            "name": "THUDM/GLM-Z1-9B-0414",
+            "max_tokens": 128000,
+            "max_output_tokens": 128000,
+            "max_completion_tokens": 32000,
+            "capabilities": {
+              "tools": true,
+              "images": false,
+              "parallel_tool_calls": true,
+              "prompt_cache_key": false,
+            },
+          },
+          {
+            "name": "Qwen/Qwen3-Coder-480B-A35B-Instruct",
+            "max_tokens": 256000,
+            "max_output_tokens": 256000,
+            "max_completion_tokens": 128000,
+            "capabilities": {
+              "tools": true,
+              "images": false,
+              "parallel_tool_calls": true,
+              "prompt_cache_key": false,
+            },
+          },
+          {
+            "name": "Qwen/Qwen3-Coder-30B-A3B-Instruct",
+            "max_tokens": 256000,
+            "max_output_tokens": 256000,
+            "max_completion_tokens": 128000,
+            "capabilities": {
+              "tools": true,
+              "images": false,
+              "parallel_tool_calls": true,
+              "prompt_cache_key": false,
+            },
+          },
+          {
+            "name": "Pro/MiniMaxAI/MiniMax-M2.1",
+            "max_tokens": 192000,
+            "max_output_tokens": 256000,
+            "max_completion_tokens": 128000,
+            "capabilities": {
+              "tools": true,
+              "images": false,
+              "parallel_tool_calls": true,
+              "prompt_cache_key": false,
+            },
+          },
+        ],
+      },
+      "ZhipuAI(bigmodel)": {
+        "api_url": "https://open.bigmodel.cn/api/paas/v4",
+        "available_models": [
+          {
+            "name": "glm-4.5-flash",
+            "display_name": null,
+            "max_tokens": 128000,
+            "max_output_tokens": 96000,
+            "max_completion_tokens": 128000,
+            "capabilities": {
+              "tools": true,
+              "images": false,
+              "parallel_tool_calls": true,
+              "prompt_cache_key": false,
+            },
+          },
+          {
+            "name": "GLM-4.5-Air",
+            "display_name": null,
+            "max_tokens": 128000,
+            "max_output_tokens": 96000,
+            "max_completion_tokens": 128000,
+            "capabilities": {
+              "tools": true,
+              "images": false,
+              "parallel_tool_calls": true,
+              "prompt_cache_key": false,
+            },
+          },
+          {
+            "name": "glm-4.6",
+            "display_name": null,
+            "max_tokens": 200000,
+            "max_output_tokens": 96000,
+            "max_completion_tokens": 200000,
+            "capabilities": {
+              "tools": true,
+              "images": false,
+              "parallel_tool_calls": true,
+              "prompt_cache_key": false,
+            },
+          },
+          {
+            "name": "glm-4.7",
+            "display_name": null,
+            "max_tokens": 200000,
+            "max_output_tokens": 96000,
+            "max_completion_tokens": 200000,
+            "capabilities": {
+              "tools": true,
+              "images": false,
+              "parallel_tool_calls": true,
+              "prompt_cache_key": false,
+            },
+          },
+        ],
+      },
+      "QWen": {
+        "api_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+        "available_models": [
+          {
+            "name": "qwen3-coder-flash",
+            "display_name": null,
+            "max_tokens": 1000000,
+            "max_output_tokens": 65536,
+            "max_completion_tokens": 100000,
+            "capabilities": {
+              "tools": true,
+              "images": false,
+              "parallel_tool_calls": true,
+              "prompt_cache_key": false,
+            },
+          },
+          {
+            "name": "qwen3-coder-plus",
+            "display_name": null,
+            "max_tokens": 1000000,
+            "max_output_tokens": 65536,
+            "max_completion_tokens": 100000,
+            "capabilities": {
+              "tools": true,
+              "images": false,
+              "parallel_tool_calls": true,
+              "prompt_cache_key": false,
+            },
+          },
+          {
+            "name": "qwen3-coder-480b-a35b-instruct",
+            "display_name": null,
+            "max_tokens": 262144,
+            "max_output_tokens": 65536,
+            "max_completion_tokens": 262144,
+            "capabilities": {
+              "tools": true,
+              "images": false,
+              "parallel_tool_calls": true,
+              "prompt_cache_key": false,
+            },
+          },
+          {
+            "name": "qwen3-coder-30b-a3b-instruct",
+            "display_name": null,
+            "max_tokens": 262144,
+            "max_output_tokens": 65536,
+            "max_completion_tokens": 262144,
+            "capabilities": {
+              "tools": true,
+              "images": false,
+              "parallel_tool_calls": true,
+              "prompt_cache_key": false,
+            },
+          },
+        ],
+      },
+    },
   },
   "languages": {
     "Markdown": {
-      "show_edit_predictions": false
+      "show_edit_predictions": false,
     },
     "Typst": {
       "formatter": {
         "external": {
           "command": "typstyle",
-          "arguments": ["{buffer_path}"]
-        }
+          "arguments": ["{buffer_path}"],
+        },
       },
-      "soft_wrap": "editor_width"
-    }
+      "soft_wrap": "editor_width",
+    },
   },
   "telemetry": {
-    "metrics": false
+    "metrics": false,
   },
   "show_edit_predictions": true,
   "agent": {
-    "default_model": {
-      "provider": "QWen",
-      "model": "qwen3-coder-30b-a3b-instruct "
+    "inline_assistant_model": {
+      "provider": "deepseek",
+      "model": "deepseek-chat",
     },
-    "model_parameters": []
+    "default_profile": "ask",
+    "default_model": {
+      "provider": "deepseek",
+      "model": "deepseek-chat",
+    },
+    "model_parameters": [],
   },
   "vim_mode": false,
   "base_keymap": "VSCode",
-  "ui_font_size": 20,
-  "buffer_font_size": 20,
+  "ui_font_size": 18,
+  "buffer_font_size": 18,
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "One Dark"
+    "dark": "One Dark",
   },
   "auto_install_extensions": {
     "php": true,
@@ -246,6 +432,7 @@
     "just": true,
     "make": true,
     "neocmake": true,
+    "nix": true,
 
     "ruby": true,
     "perl": true,
@@ -264,18 +451,21 @@
 
     "dockerfile": true,
     "git-firefly": true,
+    "gosum": true,
 
     "tokyo-night": true,
     "solarized": true,
     "catppuccin": true,
+    "catppuccin-icons": true,
     "mermaid": true,
 
-    "postgres-context-server": true
+    "opencode": true,
+    "postgres-context-server": true,
   },
 
   "ui_font_family": "Source Han Mono SC",
   // "buffer_font_family": "Noto Sans Mono CJK SC",
   "buffer_font_family": "Source Han Mono SC",
   // "buffer_font_family": "IBM Plex Mono",
-  "buffer_font_fallbacks": ["BlexMono Nerd Font", "Noto Sans CJK SC"]
+  "buffer_font_fallbacks": ["BlexMono Nerd Font", "Noto Sans CJK SC"],
 }

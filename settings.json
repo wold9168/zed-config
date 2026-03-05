@@ -7,6 +7,9 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "edit_predictions": {
+    "provider": "none"
+  },
   "icon_theme": "Catppuccin Latte",
   "session": {
     "trust_all_worktrees": true,
@@ -26,9 +29,6 @@
       "args": ["--experimental-acp"],
       "env": {},
     },
-  },
-  "features": {
-    "edit_prediction_provider": "none",
   },
   "language_models": {
     "openai_compatible": {
@@ -397,10 +397,10 @@
       "provider": "deepseek",
       "model": "deepseek-chat",
     },
-    "default_profile": "write",
+    "default_profile": "ask",
     "default_model": {
-      "provider": "ZhipuAI(bigmodel)",
-      "model": "glm-4.7",
+      "provider": "deepseek",
+      "model": "deepseek-chat",
     },
     "model_parameters": [],
   },
