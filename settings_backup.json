@@ -7,6 +7,16 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "context_servers": {
+    "postgres-context-server": {
+      "enabled": true,
+      "remote": false,
+      "settings": {},
+    },
+  },
+  "edit_predictions": {
+    "provider": "none",
+  },
   "icon_theme": "Catppuccin Latte",
   "session": {
     "trust_all_worktrees": true,
@@ -15,6 +25,7 @@
   "format_on_save": "off",
   "agent_servers": {
     "iflow": {
+      "default_mode": "smart",
       "type": "custom",
       "command": "iflow",
       "args": ["--experimental-acp"],
@@ -23,12 +34,17 @@
     "Qwen": {
       "type": "custom",
       "command": "qwen",
-      "args": ["--experimental-acp"],
+      "args": ["--acp"],
       "env": {},
     },
-  },
-  "features": {
-    "edit_prediction_provider": "none",
+    "opencode": {
+      "agent_servers": {
+        "OpenCode": {
+          "command": "opencode",
+          "args": ["acp"],
+        },
+      },
+    },
   },
   "language_models": {
     "openai_compatible": {
@@ -45,8 +61,8 @@
               "tools": true,
               "images": false,
               "parallel_tool_calls": false,
-              "prompt_cache_key": false
-            }
+              "prompt_cache_key": false,
+            },
           },
           {
             "name": "THUDM/GLM-4-9B-0414",
@@ -58,8 +74,8 @@
               "tools": true,
               "images": false,
               "parallel_tool_calls": true,
-              "prompt_cache_key": false
-            }
+              "prompt_cache_key": false,
+            },
           },
           {
             "name": "THUDM/GLM-Z1-9B-0414",
@@ -71,8 +87,8 @@
               "tools": true,
               "images": false,
               "parallel_tool_calls": true,
-              "prompt_cache_key": false
-            }
+              "prompt_cache_key": false,
+            },
           },
           {
             "name": "Qwen/Qwen3-Coder-480B-A35B-Instruct",
@@ -84,8 +100,8 @@
               "tools": true,
               "images": false,
               "parallel_tool_calls": true,
-              "prompt_cache_key": false
-            }
+              "prompt_cache_key": false,
+            },
           },
           {
             "name": "Qwen/Qwen3-Coder-30B-A3B-Instruct",
@@ -97,8 +113,8 @@
               "tools": true,
               "images": false,
               "parallel_tool_calls": true,
-              "prompt_cache_key": false
-            }
+              "prompt_cache_key": false,
+            },
           },
           {
             "name": "glm-4.5-flash",
@@ -110,8 +126,8 @@
               "tools": true,
               "images": false,
               "parallel_tool_calls": true,
-              "prompt_cache_key": false
-            }
+              "prompt_cache_key": false,
+            },
           },
           {
             "name": "glm-4.6",
@@ -123,8 +139,8 @@
               "tools": true,
               "images": false,
               "parallel_tool_calls": true,
-              "prompt_cache_key": false
-            }
+              "prompt_cache_key": false,
+            },
           },
           {
             "name": "glm-4.7",
@@ -136,8 +152,8 @@
               "tools": true,
               "images": false,
               "parallel_tool_calls": true,
-              "prompt_cache_key": false
-            }
+              "prompt_cache_key": false,
+            },
           },
           {
             "name": "qwen3-coder-flash",
@@ -149,8 +165,8 @@
               "tools": true,
               "images": false,
               "parallel_tool_calls": true,
-              "prompt_cache_key": false
-            }
+              "prompt_cache_key": false,
+            },
           },
           {
             "name": "qwen3-coder-plus",
@@ -162,8 +178,8 @@
               "tools": true,
               "images": false,
               "parallel_tool_calls": true,
-              "prompt_cache_key": false
-            }
+              "prompt_cache_key": false,
+            },
           },
           {
             "name": "qwen3-coder-480b-a35b-instruct",
@@ -175,8 +191,8 @@
               "tools": true,
               "images": false,
               "parallel_tool_calls": true,
-              "prompt_cache_key": false
-            }
+              "prompt_cache_key": false,
+            },
           },
           {
             "name": "qwen3-coder-30b-a3b-instruct",
@@ -188,10 +204,10 @@
               "tools": true,
               "images": false,
               "parallel_tool_calls": true,
-              "prompt_cache_key": false
-            }
-          }
-        ]
+              "prompt_cache_key": false,
+            },
+          },
+        ],
       },
       "Siliconflow": {
         "api_url": "https://api.siliconflow.cn/v1",
@@ -387,6 +403,9 @@
       },
       "soft_wrap": "editor_width",
     },
+    "C++": {
+      "tab_size": 2,
+    },
   },
   "telemetry": {
     "metrics": false,
@@ -459,7 +478,6 @@
     "catppuccin-icons": true,
     "mermaid": true,
 
-    "opencode": true,
     "postgres-context-server": true,
   },
 
