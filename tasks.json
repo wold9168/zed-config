@@ -42,8 +42,8 @@
     "show_command": true,
   },
   {
-    "label": "CMake: Build a CMake-generated project binary tree (Debug)",
-    "command": "cmake -B build --refresh -DCMAKE_BUILD_TYPE=Debug",
+    "label": "CMake: Build a project binary tree (Debug)",
+    "command": "cmake -B build -DCMAKE_BUILD_TYPE=Debug",
     "env": {},
     "use_new_terminal": false,
     "allow_concurrent_runs": false,
@@ -55,8 +55,8 @@
     "show_command": true,
   },
   {
-    "label": "CMake: Build a CMake-generated project binary tree (Release)",
-    "command": "cmake -B build --refresh -DCMAKE_BUILD_TYPE=Release",
+    "label": "CMake: Build a project binary tree (Release)",
+    "command": "cmake -B build -DCMAKE_BUILD_TYPE=Release",
     "env": {},
     "use_new_terminal": false,
     "allow_concurrent_runs": false,
