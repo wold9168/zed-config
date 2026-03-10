@@ -91,10 +91,10 @@
     "label": "Debug C++ binary (cmake)",
     "build": {
       "command": "cmake",
-      "args": ["--build", "\"$ZED_WORKTREE_ROOT/build\""],
+      "args": ["--build", "build"],
       "cwd": "$ZED_WORKTREE_ROOT",
     },
-    "program": "$ZED_WORKTREE_ROOT/build/$ZED_STEM/$ZED_STEM",
+    "program": "$ZED_WORKTREE_ROOT/build/main/main",
     "request": "launch",
     "adapter": "CodeLLDB",
   },
