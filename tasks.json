@@ -3,7 +3,7 @@
 // Example:
 [
   {
-    "label": "Conan CMake: Build a CMake-generated project binary tree",
+    "label": "Conan CMake: Build a CMake-generated project binary tree (Debug)",
     "command": "conan install . --output-folder=build --build=missing && cmake -B build -DCMAKE_TOOLCHAIN_FILE=conan_toolchain.cmake",
     "env": {},
     "use_new_terminal": false,
@@ -16,8 +16,8 @@
     "show_command": true,
   },
   {
-    "label": "CMake: Toggle Build binary (Debug)",
-    "command": "cmake --build build -DCMAKE_BUILD_TYPE=Debug",
+    "label": "CMake: Toggle Build binary",
+    "command": "cmake --build build",
     "env": {},
     "use_new_terminal": false,
     "allow_concurrent_runs": false,
@@ -29,20 +29,7 @@
     "show_command": true,
   },
   {
-    "label": "CMake: Toggle Build binary (Release)",
-    "command": "cmake --build build -DCMAKE_BUILD_TYPE=Release",
-    "env": {},
-    "use_new_terminal": false,
-    "allow_concurrent_runs": false,
-    "reveal": "always",
-    "reveal_target": "dock",
-    "hide": "on_success",
-    "shell": "system",
-    "show_summary": true,
-    "show_command": true,
-  },
-  {
-    "label": "CMake: Totally ReBuild binary",
+    "label": "CMake: Toggle ReBuild binary with --clean-first",
     "command": "cmake --build build --clean-first",
     "env": {},
     "use_new_terminal": false,
@@ -55,46 +42,29 @@
     "show_command": true,
   },
   {
-    "label": "CMake: Build a CMake-generated project binary tree",
-    "command": "cmake -B build",
+    "label": "CMake: Build a CMake-generated project binary tree (Debug)",
+    "command": "cmake -B build --refresh -DCMAKE_BUILD_TYPE=Debug",
     "env": {},
     "use_new_terminal": false,
     "allow_concurrent_runs": false,
-    // What to do with the terminal pane and tab, after the command was started:
-    // * `always` — always show the task's pane, and focus the corresponding tab in it (default)
-    // * `no_focus` — always show the task's pane, add the task's tab in it, but don't focus it
-    // * `never` — do not alter focus, but still add/reuse the task's tab in its pane
     "reveal": "always",
-    // Where to place the task's terminal item after starting the task:
-    // * `dock` — in the terminal dock, "regular" terminal items' place (default)
-    // * `center` — in the central pane group, "main" editor area
     "reveal_target": "dock",
-    // What to do with the terminal pane and tab, after the command had finished:
-    // * `never` — Do nothing when the command finishes (default)
-    // * `always` — always hide the terminal tab, hide the pane also if it was the last tab in it
-    // * `on_success` — hide the terminal tab on task success only, otherwise behaves similar to `always`
     "hide": "on_success",
-    // Which shell to use when running a task inside the terminal.
-    // May take 3 values:
-    // 1. (default) Use the system's default terminal configuration in /etc/passwd
-    //      "shell": "system"
-    // 2. A program:
-    //      "shell": {
-    //        "program": "sh"
-    //      }
-    // 3. A program with arguments:
-    //     "shell": {
-    //         "with_arguments": {
-    //           "program": "/bin/bash",
-    //           "args": ["--login"]
-    //         }
-    //     }
     "shell": "system",
-    // Whether to show the task line in the output of the spawned task, defaults to `true`.
     "show_summary": true,
-    // Whether to show the command line in the output of the spawned task, defaults to `true`.
     "show_command": true,
-    // Represents the tags for inline runnable indicators, or spawning multiple tasks at once.
-    // "tags": []
+  },
+  {
+    "label": "CMake: Build a CMake-generated project binary tree (Release)",
+    "command": "cmake -B build --refresh -DCMAKE_BUILD_TYPE=Release",
+    "env": {},
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false,
+    "reveal": "always",
+    "reveal_target": "dock",
+    "hide": "on_success",
+    "shell": "system",
+    "show_summary": true,
+    "show_command": true,
   },
 ]
