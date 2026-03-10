@@ -24,23 +24,12 @@
   "disable_ai": false,
   "format_on_save": "off",
   "agent_servers": {
-    "iflow": {
-      "default_mode": "smart",
-      "type": "custom",
-      "command": "iflow",
-      "args": ["--experimental-acp"],
-      "env": {},
-    },
     "Qwen": {
-      "type": "custom",
-      "command": "qwen",
-      "args": ["--acp"],
-      "env": {},
-    },
-    "OpenCode": {
-      "command": "opencode",
-      "args": ["acp"],
-    },
+      "type": "extension",
+      "default_config_options": {
+        "mode": "auto-edit"
+      }
+    }
   },
   "language_models": {
     "openai_compatible": {
