@@ -3,8 +3,8 @@
 // Example:
 [
   {
-    "label": "Conan CMake: Build a CMake-generated project binary tree (Debug)",
-    "command": "conan install . --output-folder=build --build=missing && cmake -B build -DCMAKE_TOOLCHAIN_FILE=conan_toolchain.cmake",
+    "label": "Conan CMake: Build a CMake-generated project binary tree (Release)",
+    "command": "conan install . --output-folder=build --build=missing && cmake -B build --fresh -DCMAKE_BUILD_TYPE=Release -DCMAKE_TOOLCHAIN_FILE=conan_toolchain.cmake",
     "env": {},
     "use_new_terminal": false,
     "allow_concurrent_runs": false,
@@ -43,7 +43,7 @@
   },
   {
     "label": "CMake: Build a project binary tree (Debug)",
-    "command": "cmake -B build -DCMAKE_BUILD_TYPE=Debug",
+    "command": "cmake -B build -DCMAKE_BUILD_TYPE=Debug --fresh",
     "env": {},
     "use_new_terminal": false,
     "allow_concurrent_runs": false,
@@ -56,7 +56,7 @@
   },
   {
     "label": "CMake: Build a project binary tree (Release)",
-    "command": "cmake -B build -DCMAKE_BUILD_TYPE=Release",
+    "command": "cmake -B build -DCMAKE_BUILD_TYPE=Release --fresh",
     "env": {},
     "use_new_terminal": false,
     "allow_concurrent_runs": false,
