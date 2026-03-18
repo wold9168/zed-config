@@ -42,6 +42,12 @@
       "command": "opencode",
       "args": ["acp"],
     },
+    "Kimi Code CLI": {
+      "type": "custom",
+      "command": "kimi",
+      "args": ["acp"],
+      "env": {}
+    }
   },
   "language_models": {
     "openai_compatible": {
@@ -288,6 +294,19 @@
             },
           },
           {
+            "name": "glm-4.7-flash",
+            "display_name": null,
+            "max_tokens": 128000,
+            "max_output_tokens": 96000,
+            "max_completion_tokens": 128000,
+            "capabilities": {
+              "tools": true,
+              "images": false,
+              "parallel_tool_calls": true,
+              "prompt_cache_key": false,
+            },
+          },
+          {
             "name": "GLM-4.5-Air",
             "display_name": null,
             "max_tokens": 128000,
@@ -315,6 +334,19 @@
           },
           {
             "name": "glm-4.7",
+            "display_name": null,
+            "max_tokens": 200000,
+            "max_output_tokens": 96000,
+            "max_completion_tokens": 200000,
+            "capabilities": {
+              "tools": true,
+              "images": false,
+              "parallel_tool_calls": true,
+              "prompt_cache_key": false,
+            },
+          },
+          {
+            "name": "glm-5.0",
             "display_name": null,
             "max_tokens": 200000,
             "max_output_tokens": 96000,
@@ -409,6 +441,10 @@
   },
   "show_edit_predictions": true,
   "agent": {
+    "commit_message_model": {
+      "provider": "deepseek",
+      "model": "deepseek-chat",
+    },
     "inline_assistant_model": {
       "provider": "deepseek",
       "model": "deepseek-chat",
