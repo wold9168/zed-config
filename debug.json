@@ -19,7 +19,7 @@
     "buildFlags": ["-tags", "integration"],
   },
   {
-    "label": "Debug C (make)",
+    "label": "C (make)",
     "build": {
       "command": "make",
       "args": ["-j8"],
@@ -30,7 +30,7 @@
     "adapter": "CodeLLDB",
   },
   {
-    "label": "Debug C (clang)",
+    "label": "C (clang)",
     "build": {
       "command": "clang",
       "args": ["-g", "$ZED_FILE", "-o", "$ZED_DIRNAME/$ZED_STEM"],
@@ -41,7 +41,7 @@
     "adapter": "CodeLLDB",
   },
   {
-    "label": "Debug Modern C (clang c23)",
+    "label": "Modern C (clang c23)",
     "build": {
       "command": "clang",
       "args": [
@@ -60,7 +60,7 @@
     "adapter": "CodeLLDB",
   },
   {
-    "label": "Debug C++ (cmake)",
+    "label": "C++ (cmake)",
     "build": {
       "command": "cmake",
       "args": ["--build", "build"],
@@ -71,7 +71,7 @@
     "adapter": "CodeLLDB",
   },
   {
-    "label": "Debug C++ (clang++)",
+    "label": "C++ (clang++)",
     "build": {
       "command": "clang++",
       "args": ["-g", "$ZED_FILE", "-o", "$ZED_DIRNAME/$ZED_STEM"],
