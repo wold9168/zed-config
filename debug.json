@@ -18,20 +18,6 @@
     "cwd": "$ZED_WORKTREE_ROOT",
   },
   {
-    "label": "Debug active JavaScript file",
-    "adapter": "JavaScript",
-    "program": "$ZED_FILE",
-    "request": "launch",
-    "cwd": "$ZED_WORKTREE_ROOT",
-  },
-  {
-    "label": "JavaScript debug terminal",
-    "adapter": "JavaScript",
-    "request": "launch",
-    "cwd": "$ZED_WORKTREE_ROOT",
-    "console": "integratedTerminal",
-  },
-  {
     "label": "Go (Delve)",
     "adapter": "Delve",
     "program": "$ZED_FILE",
@@ -108,5 +94,13 @@
     "program": "$ZED_DIRNAME/$ZED_STEM",
     "request": "launch",
     "adapter": "CodeLLDB",
+  },
+  {
+    "adapter": "JavaScript",
+    "label": "Debug JS file",
+    "type": "node",
+    "request": "launch",
+    "program": "$ZED_FILE",
+    "skipFiles": ["<node_internals>/**"],
   },
 ]
