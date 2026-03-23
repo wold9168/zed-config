@@ -4,14 +4,14 @@
 // see: https://zed.dev/docs/debugger
 [
   {
-    "label": "Go (Delve)",
+    "label": "Go (Delve): Default",
     "adapter": "Delve",
     "program": "$ZED_FILE",
     "request": "launch",
     "mode": "debug",
   },
   {
-    "label": "Run integration tests",
+    "label": "Go (Delve): Integration Tests",
     "adapter": "Delve",
     "request": "launch",
     "mode": "test",
