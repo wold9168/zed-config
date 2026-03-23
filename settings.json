@@ -46,8 +46,8 @@
       "type": "custom",
       "command": "kimi",
       "args": ["acp"],
-      "env": {}
-    }
+      "env": {},
+    },
   },
   "language_models": {
     "openai_compatible": {
@@ -504,6 +504,9 @@
     "dockerfile": true,
     "git-firefly": true,
     "gosum": true,
+
+    "javascript-snippets": true,
+    "python-snippets": true,
 
     "tokyo-night": true,
     "solarized": true,
