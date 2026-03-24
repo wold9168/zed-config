@@ -41,5 +41,29 @@
     "bindings": {
       "alt-shift-t": "task::Spawn"
     }
-  }
+  },
+  {
+    "context": "(Pane || Editor)",
+    "bindings": {
+      "ctrl-]": "pane::GoForward"
+    }
+  },
+  {
+    "context": "(Pane || Editor)",
+    "bindings": {
+      "ctrl-[": "pane::GoBack"
+    }
+  },
+  {
+    "context": "Pane",
+    "bindings": {
+      "ctrl-alt--": null
+    }
+  },
+  {
+    "context": "Pane",
+    "bindings": {
+      "ctrl-alt-_": null
+    }
+  },
 ]
