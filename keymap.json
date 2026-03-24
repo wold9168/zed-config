@@ -29,5 +29,17 @@
     "bindings": {
       "ctrl-y": "agent::AllowOnce"
     }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "f3": "task::Spawn"
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "alt-shift-t": "task::Spawn"
+    }
   }
 ]
