@@ -520,6 +520,10 @@
   "ui_font_family": "Source Han Mono SC",
   // "buffer_font_family": "Noto Sans Mono CJK SC",
   "buffer_font_family": "Source Han Mono SC",
-  // "buffer_font_family": "IBM Plex Mono",
-  "buffer_font_fallbacks": ["BlexMono Nerd Font", "Noto Sans CJK SC"],
+  // "buffer_font_family": "BlexMono Nerd Font",
+  "buffer_font_fallbacks": [
+    "Source Han Mono SC",
+    "BlexMono Nerd Font",
+    "Noto Sans CJK SC",
+  ],
 }
