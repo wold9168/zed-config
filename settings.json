@@ -24,30 +24,18 @@
   "disable_ai": false,
   "format_on_save": "off",
   "agent_servers": {
-    "iflow": {
-      "default_mode": "smart",
-      "type": "custom",
-      "command": "iflow",
-      "args": ["--experimental-acp"],
-      "env": {},
+    "kimi": {
+      "type": "registry"
     },
-    "Qwen": {
-      "type": "custom",
-      "command": "qwen",
-      "args": ["--acp"],
-      "env": {},
+    "opencode": {
+      "type": "registry"
     },
-    "OpenCode": {
-      "type": "custom",
-      "command": "opencode",
-      "args": ["acp"],
+    "github-copilot-cli": {
+      "type": "registry"
     },
-    "Kimi Code CLI": {
-      "type": "custom",
-      "command": "kimi",
-      "args": ["acp"],
-      "env": {},
-    },
+    "qwen-code": {
+      "type": "registry"
+    }
   },
   "language_models": {
     "openai_compatible": {
