@@ -33,7 +33,7 @@
   {
     "context": "Workspace",
     "bindings": {
-      "f3": "task::Spawn"
+      "alt-.": "task::Spawn"
     }
   },
   {
