@@ -7,9 +7,20 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "cli_default_open_behavior": "new_window",
+  "project_panel": {
+    "dock": "left"
+  },
+  "outline_panel": {
+    "dock": "left"
+  },
+  "collaboration_panel": {
+    "dock": "left"
+  },
   "show_signature_help_after_edits": true,
   "auto_signature_help": true,
   "git_panel": {
+    "dock": "left",
     "tree_view": true,
   },
   "context_servers": {
@@ -179,6 +190,7 @@
   },
   "show_edit_predictions": true,
   "agent": {
+    "dock": "right",
     "default_model": {
       "provider": "deepseek",
       "model": "deepseek-reasoner",
@@ -192,7 +204,7 @@
       "provider": "deepseek",
       "model": "deepseek-chat",
     },
-    "default_profile": "write",
+    "default_profile": "ask",
     "model_parameters": [],
   },
   "languages": {
